@@ -39,3 +39,14 @@ date=Time.now + (60 * 60 * 24 * 7)
 > puts date.strftime("%d-%m-%y")
 => "05-01-14"
 
+# Question 17 :
+
+puts string_one
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. "
+> string_one.length
+=> 123
+
+> string_two = "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used."
+=> "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used."
+> string_two.length
+=> 162
