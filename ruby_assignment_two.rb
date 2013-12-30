@@ -11,7 +11,7 @@ def non_duplicated_values(array)
   array.find_all { |value| array.count(value) == 1 }
 end
   
-print non_duplicated_values(array)
+  print non_duplicated_values(array)
 
 
 
@@ -33,6 +33,6 @@ def palindrome?(sentence)
     end
 end
 
-print palindrome?(sentence_one)
+  print palindrome?(sentence_one)
 
 

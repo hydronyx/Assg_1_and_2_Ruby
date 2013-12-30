@@ -8,8 +8,8 @@ string_one = "RUBY parses a file by looking for <br/> one of the special tags " 
            + "The parser then executes all of the code it finds until it runs"  \
            + "into a RUBY closing <br/> tag."
 
-puts "The No.of occurances of RUBY in string 1 are #{string_one.scan('RUBY').size}."
-print "\n\n"
+  puts "The No.of occurances of RUBY in string 1 are #{string_one.scan('RUBY').size}."
+  print "\n\n"
 
 
 
@@ -41,8 +41,8 @@ string_one = "RUBY parses a file by looking for <br/> one of the special tags " 
            + "that tells it to start interpreting the text as RUBY code."       \
            + "The parser then executes all of the code it finds until it runs"  \
            + "into a RUBY closing <br/> tag."
-puts string_one.capitalize
-print "\n\n"
+  puts string_one.capitalize
+  print "\n\n"
 
 
 
@@ -57,8 +57,8 @@ string_two = "RUBY does not require (or support) explicit type definition in "  
            + "variable declaration; a variable's type is determined by the"     \
            + "context in which the variable is used."
                             
-puts string_one + string_two
-print "\n\n"
+  puts string_one + string_two
+  print "\n\n"
 
 
 
@@ -114,8 +114,8 @@ string_one = "RUBY parses a file by looking for <br/> one of the special tags " 
            + "that tells it to start interpreting the text as RUBY code."       \
            + "The parser then executes all of the code it finds until it runs"  \
            + "into a RUBY closing <br/> tag."
-puts string_one.gsub('<br/>','')
-print "\n\n"
+  puts string_one.gsub('<br/>','')
+  print "\n\n"
 
 
 
@@ -132,7 +132,7 @@ string_one.split.each do |word|
     puts word 
   end
 end
-print "\n\n"
+  print "\n\n"
 
 
 
