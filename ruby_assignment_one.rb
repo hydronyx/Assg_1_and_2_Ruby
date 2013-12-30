@@ -1,7 +1,9 @@
 #Question 5 : Find occurrence of RUBY from string 1.
 
-str="RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
-puts " The count of the string RUBY are : #{ str.count('RUBY')}"
+string_one="RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
+puts "The No.of occurances of RUBY in  string 1 are #{string_one.scan('RUBY').size}."
+# The No.of occurances of RUBY in  string 1 are 3
+
 
 
 
@@ -88,6 +90,25 @@ date=Time.now + (60 * 60 * 24 * 7)
 # => 2014-01-05 11:41:02 UTC
 puts date.strftime("%d-%m-%y")
 # => "05-01-14"
+
+
+# Question No 15 :Remove the HTML characters from string.
+
+string_one="RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
+
+string_one.gsub('<br/>','')
+# => "RUBY parses a file by looking for  one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing  tag."
+
+
+
+#Question No 16 : Print the 'RUBY' word from string 1 by traversing it using string functions
+
+string_one.split.each do |word|
+  if word=='RUBY' 
+  puts word 
+  end
+end
+
 
 
 
