@@ -22,6 +22,7 @@ end
   print("\n\n")
 
 
+
 puts "QUESTION No 2 : Given an Array, return the elements that are present exactly"   +
      " once in the array. You need to write a method called non_duplicated_values "   +
      " to accomplish this task.Example: Given [1,2,2,3,3,4,5],"                       +
@@ -35,6 +36,7 @@ end
   
   print non_duplicated_values(array)
   print("\n\n")
+
 
 
 puts "QUESTION No 3 : Given a sentence, return true if the sentence is a palindrome." +
