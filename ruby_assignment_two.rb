@@ -1,5 +1,5 @@
 # ASSIGNMENT NO 2 - RUBY BASICS QUESTION 1-4
-
+puts "\n\n"
 
 puts " QUESTION No 1 : Compute the sum of cubes for a given range a through b."       +
      " Write a method called sum_of_cubes to accomplish this task."                   +   
@@ -102,7 +102,79 @@ end
   
   puts kaprekar(9) 
   puts kaprekar(10) 
+  puts "\n\n\n"
 
 
 
+puts "QUESTION 5 : Differentiation between proc, block and lambda : DIFFERENCE 1"
+
+puts "Difference between Proc and Lambda : - 1)In Handling of parameters "            +  
+     "Proc take only required number of parameters from the parameters passed."       +
+     "It is shown as below \n"
+      
+  puts "Three parameters passed to Proc ,accepted"
+    p = Proc.new { |x, y, z| print  x , y , z } 
+    p.call 14, 9, 2   
+    puts "\n"
+
+  puts "Four parameters passed to Proc ,accepted"
+    p = Proc.new { |x, y, z| print  x , y , z } 
+    p.call 14, 9, 2,88
+    puts "\n\n"
+
+puts "Difference between Proc and Lambda : - 1)But in Handling of parameters "        +
+     " in Lambda if no of parameters exceed the number of required "                  + 
+     "parameters,it throws error."                                                    +
+     "It is shown as below "
+      
+  puts "Three parameters passed to Lambda ,accepted."
+    l = lambda { |x, y, z| print x,y,z } 
+    l.call 14, 9, 2
+    puts "\n"
+
+  puts "Four parameters passed to Lambda ,throws an error."
+    l = lambda { |x, y, z| print x,y,z } 
+#   l.call 14, 9, 2,88
+    puts "l.call 14, 9, 2,88 commented because this call will lead to error."
+    puts "\n\n\n"
+
+ 
+
+
+puts "QUESTION 5 : Differentiation between proc, block and lambda : DIFFERENCE 2"
+
+puts " Difference between Proc and Lambda :2) When return statement is encountered,"   +
+     " Proc Returns back from the method without executing the next line after"        +
+     " the block.That is it executes next line after the method it was called from.\n"
+
+def proc_method
+  p = Proc.new { return "\n Proc Executed " }
+    p.call
+    print " Statement AFTER Proc executed.\n"    
+end
+  puts proc_method 
+    print " The Statement AFTER the proc_method executed.\n"
+    puts "\n\n"
+
+
+  
+puts " Difference between Proc and Lambda :2) When return statement is encountered,"  +
+     " Lambda executes the next line after the call and also after the method "       +
+     " it was called from. "
+
+def lambda_method
+  l = lambda { return " \n Lambda Executed.\n" }
+    puts l.call
+    print " Statement AFTER Lambda Executed\n"  
+end
+  lambda_method
+    print " The Statement AFTER the lambda_method executed.\n"
+    puts "\n\n"
+
+
+ 
+
+
+
+ 
 
