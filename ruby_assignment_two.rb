@@ -7,7 +7,7 @@ puts " QUESTION No 1 : Compute the sum of cubes for a given range a through b." 
 
 def sum_of_cubes(a,b)
   sum=0;
-    (a..b).each{|x| sum+=(x**3)}
+  (a..b).each{|x| sum+=(x**3)}
     return sum 
 end
 
@@ -55,6 +55,7 @@ def palindrome?(sentence)
     else
       print "false"
     end
+
 end
 
   print palindrome?(sentence_one)
@@ -79,30 +80,33 @@ def kaprekar(input)
   square_length= square_str.length
 
   index=0
-  first=0
-  second=0
-
-    while index < num_length  do
+  first_number=0
+  second_number=0
+  
+  while index < num_length  do
       
-      last = square %10
-      first = first + last * (10**index)
-      square = square/10         
-        index = index+1   
-    end
+    last_digit = square %10
+    first_number = first_number + last_digit * (10**index)
+    square = square/10 
 
-   second = square
-   temp= first + second
+      index = index+1   
+  end
 
-   if temp == num
+  second_number = square
+  temp= first_number + second_number
+
+  if temp == num
     print "The number #{num} is Kaprekar Number"
-   else
+  else
     print "The number #{num} is not a Kaprekar Number"
   end
+
 end  
   
-  puts kaprekar(9) 
-  puts kaprekar(10) 
-  puts "\n\n\n"
+puts kaprekar(9) 
+puts kaprekar(297)
+puts kaprekar(10) 
+puts "\n\n\n"
 
 
 
@@ -148,18 +152,19 @@ puts " Difference between Proc and Lambda :2) When return statement is encounter
      " the block.That is it executes next line after the method it was called from.\n"
 
 def proc_method
-  p = Proc.new { return "\n Proc Executed " }
+    p = Proc.new { return "\n Proc Executed " }
     p.call
     print " Statement AFTER Proc executed.\n"    
 end
+
   puts proc_method 
-    print " The Statement AFTER the proc_method executed.\n"
-    puts "\n\n"
+  print " The Statement AFTER the proc_method executed.\n"
+  puts "\n\n"
 
 
   
-puts " Difference between Proc and Lambda :2) When return statement is encountered,"  +
-     " Lambda executes the next line after the call and also after the method "       +
+puts " Difference between Proc and Lambda :2) When return statement is encountered,"     +
+     " Lambda executes the next line after the call and also after the method "          +
      " it was called from. "
 
 def lambda_method
@@ -167,13 +172,32 @@ def lambda_method
     puts l.call
     print " Statement AFTER Lambda Executed\n"  
 end
+
   lambda_method
-    print " The Statement AFTER the lambda_method executed.\n"
-    puts "\n\n"
+  print " The Statement AFTER the lambda_method executed.\n"
+  puts "\n\n"
 
+puts " DIFFERENCE : Block vs Proc and Lambda - \n 1) Procs are objects,"                  +
+     " Blocks are not objects.\n 2) Blocks cannot be assigned to a variable."             +
+     " \n 3) At most one block can appear in an argument list\n"
 
+puts "Difference 1: This is shown in Eg. Below."  
+  p = Proc.new { puts "Hi Suyog" }
+  p.call                      # prints 'Hi Suyog'
+  p.class                     # returns 'Proc'
+  a = p                       # a now equals p, a Proc instance
+  p                           # returns a proc object #<Proc:0x00000002017be0@(irb):11> 
+
+puts "Difference 2 :  Blocks cannot be assigned to a variable. "
+
+   a = { puts "Hello World"}   # syntax error as block cannot be assigned to a variable
+
+puts "\nDifference 3: A block is just part of the syntax of a method call.It doesn’t mean"+
+     " anything on a standalone basis.A block can only appear in argument lists."         +
+     " This is shown as below E.g. :.\n"
  
-
+  { puts "Hello World" }      # syntax error as it is not used as part of method call 
+  [1,2,3].each {|x| puts x*2} # only works as part of the syntax of a method call
 
 
  
